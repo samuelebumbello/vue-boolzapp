@@ -73,15 +73,14 @@
                     <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
                 </div>
 
-                <div class="contacts overflow-auto bg-white">
-                    <div class="lineeb d-flex p-2">
-                        <img src="img/avatar_1.jpg" alt="">
+                <div class="contacts bg-white">
+                    <div v-for="contact in contacts" class="lineeb d-flex p-2">
+                        <img :src="contact.avatar" alt="">
                         <div class="mt-2 ps-4">
-                            <span class="fw-semibold">Marco</span>
+                            <span class="fw-semibold">{{contact.name}}</span>
                             <div class="dc-text">Ultimo messaggio inviato</div>
                         </div>
                     </div>
-                    
                 </div>
 
             </div>
@@ -118,6 +117,18 @@
                 
                     </div>
                 
+                                <!--CHAT-->
+                    <div class="chat-right">
+                        <div class="chat p-3 d-flex flex-column">
+                            <div class="sent mb-2">
+                                <span>Ciao come stai?</span>
+                                <span class="hour text-end"></span>
+                            </div>
+                            <div class="msg-recive mb-2">
+                                <span>Tutto bene, tu?</span>
+                            </div>
+                        </div>
+                    </div>
                     
                 </div>
 
@@ -129,6 +140,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+    <script type="module" src="js/script.js" ></script>
 </body>
 </html>
