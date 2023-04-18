@@ -126,8 +126,8 @@
                             <!-- MESSAGGI MANDATI -->
 
                             <!-- qui faccio ciclare il messaggio della chat dei contatti -->
-                            <div v-for="messaggio in (contacts[counter].messages)" class="mb-2">
-                                <span :class="messaggio.status">{{messaggio.message}}</span>
+                            <div :class="messaggio.status"  v-for="messaggio in (contacts[counter].messages)" class="mb-2">
+                                <span>{{messaggio.message}}</span>
                                 <div class="hour text-end">
                                     <span>14:30</span>
                                 </div>
