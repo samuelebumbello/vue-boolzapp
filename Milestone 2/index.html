@@ -74,6 +74,7 @@
                 </div>
 
                 <div class="contacts bg-white">
+                    <!-- qui faccio ciclare i contatti tramite il click -->
                     <div @click="counter = i" v-for="(contact, i) in contacts" class="lineeb d-flex p-2">
                         <img :src="contact.avatar" alt="">
                         <div class="mt-2 ps-4">
@@ -120,14 +121,26 @@
                 
                                 <!--CHAT-->
                     <div class="chat-right">
-                        <div class="chat p-3 pt-5 d-flex flex-column">
-                            <div class="sent mb-2">
-                                <span>Ciao come stai?</span>
-                                <span class="hour text-end"></span>
+                        <div class="chat p-3 pt-5 d-flex flex-column justify-content-between">
+
+                            <!-- MESSAGGI MANDATI -->
+
+                            <!-- qui faccio ciclare il messaggio della chat dei contatti -->
+                            <div v-for="messaggio in (contacts[counter].messages)" class="sent mb-2 ">
+                                <span>{{messaggio.message}}</span>
+                                <div class="hour text-end">
+                                    <span>14:30</span>
+                                </div>
                             </div>
+
+                            <!-- MESSAGGI RICEVUTI -->
                             <div class="msg-recive mb-2">
                                 <span>Tutto bene, tu?</span>
+                                <div class="hour text-end">
+                                    <span>15:30</span>
+                                </div>
                             </div>
+
                         </div>
                         <div class="footer-chatRight">
                             <div class="row p-3 ">
