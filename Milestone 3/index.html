@@ -126,18 +126,10 @@
                             <!-- MESSAGGI MANDATI -->
 
                             <!-- qui faccio ciclare il messaggio della chat dei contatti -->
-                            <div v-for="messaggio in (contacts[counter].messages)" class="sent mb-2 ">
-                                <span>{{messaggio.message}}</span>
+                            <div v-for="messaggio in (contacts[counter].messages)" class="mb-2">
+                                <span :class="messaggio.status">{{messaggio.message}}</span>
                                 <div class="hour text-end">
                                     <span>14:30</span>
-                                </div>
-                            </div>
-
-                            <!-- MESSAGGI RICEVUTI -->
-                            <div class="msg-recive mb-2">
-                                <span>Tutto bene, tu?</span>
-                                <div class="hour text-end">
-                                    <span>15:30</span>
                                 </div>
                             </div>
 
@@ -149,7 +141,7 @@
                                 <i class="fa-regular fa-face-smile"></i>
                             </div>
                                 <div class="col-10">
-                                    <input type="text" placeholder="Scrivi un messaggio" class="bar-chat">
+                                    <input @keyup.enter="msgEnter" v-model="msgInvio" type="text" placeholder="Scrivi un messaggio" class="bar-chat">
                                 </div>
                                 <div class="col-1 text-center fs-4 ">
                                     <i class="fa-solid fa-microphone"></i>        

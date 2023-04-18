@@ -136,18 +136,18 @@ body{
     min-width: 200px;
 }
 
-.chat{
-    height: calc(100% - 68px);
-    overflow-x: hidden;
-overflow-y: scroll;
-}
-
-.chat .msg-recive{
+.received{
     background-color: white ;
     padding: 15px;
     width: 50%;
     border-radius: 10px;
-    min-width: 200px;
+    min-width: 200px; 
+}
+
+.chat{
+    height: calc(100% - 68px);
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .chat .hour {
@@ -163,9 +163,6 @@ overflow-y: scroll;
     padding-left: 10px;
 }
 
-/* .footer-chatRight{
-    margin-top: 483px;
-}  */
 
 .footer-chatRight .row{
     background-color: #F1F1F1;
