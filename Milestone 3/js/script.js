@@ -14,13 +14,18 @@ createApp({
             console.log(this.selectedProfile);
         },
         msgEnter(){
-            const newMsg = {
-                message:this.msgInvio,
-                status: "sent"
+            if(this.msgInvio.length === 0){
+
+            }else{
+                const newMsg = {
+                    message:this.msgInvio,
+                    status: "sent"
+                }
+                this.msgInvio = '';
+                this.contacts[this.counter].messages.push(newMsg)
+                this.msgReceived()
+
             }
-            this.msgInvio = '';
-            this.contacts[this.counter].messages.push(newMsg)
-            this.msgReceived()
         },
         msgReceived(){
             setTimeout(() => {

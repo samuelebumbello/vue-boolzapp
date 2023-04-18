@@ -141,7 +141,7 @@
                                 <i class="fa-regular fa-face-smile"></i>
                             </div>
                                 <div class="col-10">
-                                    <input @keyup.enter="msgEnter" v-model="msgInvio" type="text" placeholder="Scrivi un messaggio" class="bar-chat">
+                                    <input @keyup.enter="msgEnter" v-model.trim="msgInvio" type="text" placeholder="Scrivi un messaggio" class="bar-chat">
                                 </div>
                                 <div class="col-1 text-center fs-4 ">
                                     <i class="fa-solid fa-microphone"></i>        
