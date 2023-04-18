@@ -80,6 +80,8 @@ body{
 }
 
 .contacts{
+    height: calc(100% - 171px);
+    overflow-x: hidden;
     overflow-y: scroll;
 }
 
@@ -121,7 +123,7 @@ body{
 
 .chat-right{
     width: 100%;
-    height: 740px;
+    height: 90%;
     background-image: url(../img/mine.jpg);
 }
 
@@ -130,14 +132,20 @@ body{
     align-self: flex-end;
     padding: 15px;
     border-radius: 10px;
-    width: 30%;
+    width: 50%;
     min-width: 200px;
+}
+
+.chat{
+    height: calc(100% - 68px);
+    overflow-x: hidden;
+overflow-y: scroll;
 }
 
 .chat .msg-recive{
     background-color: white ;
     padding: 15px;
-    width: 30%;
+    width: 50%;
     border-radius: 10px;
     min-width: 200px;
 }
@@ -155,9 +163,9 @@ body{
     padding-left: 10px;
 }
 
-.footer-chatRight{
+/* .footer-chatRight{
     margin-top: 483px;
-} 
+}  */
 
 .footer-chatRight .row{
     background-color: #F1F1F1;
