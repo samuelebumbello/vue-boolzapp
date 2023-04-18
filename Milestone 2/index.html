@@ -74,7 +74,7 @@
                 </div>
 
                 <div class="contacts bg-white">
-                    <div v-for="contact in contacts" class="lineeb d-flex p-2">
+                    <div @click="counter = i" v-for="(contact, i) in contacts" class="lineeb d-flex p-2">
                         <img :src="contact.avatar" alt="">
                         <div class="mt-2 ps-4">
                             <span class="fw-semibold">{{contact.name}}</span>
@@ -95,9 +95,9 @@
 
                         <span class="user mb-2">
                             <div class="profile-chat d-flex ">
-                                <img src="img/avatar_io.jpg" alt="">
+                                <img :src="contacts[counter].avatar" alt="">
                                 <div class="mt-2">
-                                    <span class="fw-semibold">Terry</span>
+                                    <span class="fw-semibold">{{contacts[counter].name}}</span>
                                     <div class="dc-text fw-normal"> Ultimo accesso oggi alle 16:35</div>
                                 </div>
                             </div>
