@@ -72,8 +72,6 @@
                     </span>
 
                     <input
-                    v-model.trim="VerifyMsg"
-                    @keyup="search"
                     type="text" class="form-control"
                     placeholder="Cerca o inizia una nuova chat"
                     
@@ -87,7 +85,7 @@
                     @click="counter = i" 
                     v-for="(contact, i) in contacts"
                     >
-                    <!-- v-if="contact.visible" -->
+
                             <img :src="contact.avatar" alt="">
                             <div class="mt-2 ps-4">
                                 <span class="fw-semibold">{{contact.name}}</span>

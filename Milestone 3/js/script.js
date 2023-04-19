@@ -39,12 +39,6 @@ createApp({
             },1000)
         },
 
-        search(){
-            this.contacts.foreach((contact) => {
-                contact.visible = contact.name.toLowerCase().includes(this.verifyMsg.toLowerCase())
-            })            
-        }
-
     }
 
 }).mount('#app')
