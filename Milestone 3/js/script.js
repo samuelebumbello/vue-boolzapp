@@ -5,9 +5,11 @@ createApp({
     data(){
         return{
             contacts,
-            counter : 0
+            counter : 0,
+            checkMsg: ""
         }
     },
+
     methods:{
         selectedProfile(i){
             this.counter = i
@@ -35,7 +37,14 @@ createApp({
                 }
                 this.contacts[this.counter].messages.push(answer)
             },1000)
+        },
+
+        search(){
+            this.contacts.foreach((contact) => {
+                contact.visible = contact.name.toLowerCase().includes(this.verifyMsg.toLowerCase())
+            })            
         }
+
     }
 
 }).mount('#app')

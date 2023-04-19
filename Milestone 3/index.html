@@ -70,18 +70,30 @@
                     <span class="input-group-text" id="basic-addon1">
                         <i class="fa fa-search"></i>
                     </span>
-                    <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
+
+                    <input
+                    v-model.trim="VerifyMsg"
+                    @keyup="search"
+                    type="text" class="form-control"
+                    placeholder="Cerca o inizia una nuova chat"
+                    
+                    >
                 </div>
 
                 <div class="contacts bg-white">
                     <!-- qui faccio ciclare i contatti tramite il click -->
-                    <div @click="counter = i" v-for="(contact, i) in contacts" class="lineeb d-flex p-2">
-                        <img :src="contact.avatar" alt="">
-                        <div class="mt-2 ps-4">
-                            <span class="fw-semibold">{{contact.name}}</span>
-                            <div class="dc-text">Ultimo messaggio inviato</div>
-                        </div>
-                        <div class="oraMsg">12:00</div>
+                    <div
+                    class="lineeb d-flex p-2"
+                    @click="counter = i" 
+                    v-for="(contact, i) in contacts"
+                    >
+                    <!-- v-if="contact.visible" -->
+                            <img :src="contact.avatar" alt="">
+                            <div class="mt-2 ps-4">
+                                <span class="fw-semibold">{{contact.name}}</span>
+                                <div class="dc-text">Ultimo messaggio inviato</div>
+                            </div>
+                            <div class="oraMsg">12:00</div>
                     </div>
                 </div>
 
