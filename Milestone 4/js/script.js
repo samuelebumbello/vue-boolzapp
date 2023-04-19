@@ -35,6 +35,12 @@ createApp({
                 }
                 this.contacts[this.counter].messages.push(answer)
             },1000)
+        },
+
+        search(){
+            this.contacts.foreach((contact) => {
+                contact.visible = contact.name.toLowerCase().includes(this.verifyMsg.toLowerCase())
+            })            
         }
     }
 
